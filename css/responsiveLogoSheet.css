@@ -11,7 +11,9 @@
       header.navbar-fixed-top .brand-logo-img-res {
         height: 62px;
       }
-
+.footer-mail-box{
+    width: 280px;
+}
       /* Reduce height when screen width is 1199px or less */
       @media (max-width: 1199px) {
           .brand-logo-img {
@@ -32,6 +34,9 @@
           .brand-logo-img-res {
               height: 60px;
           }
+          .footer-mail-box{
+            width: auto;
+        }
       }
 
       @media (max-width: 576px) {
