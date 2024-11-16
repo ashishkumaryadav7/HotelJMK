@@ -1,0 +1,54 @@
+      /* Default height */
+      .brand-logo-img {
+          height: 80px;
+      }
+
+      .navbar-brand-res {
+          display: none;
+      }
+
+      header.navbar-fixed-top .brand-logo-img,
+      header.navbar-fixed-top .brand-logo-img-res {
+        height: 62px;
+      }
+
+      /* Reduce height when screen width is 1199px or less */
+      @media (max-width: 1199px) {
+          .brand-logo-img {
+              height: 70px;
+          }
+      }
+
+      @media (max-width: 992px) {
+          .navbar-brand {
+              display: none;
+          }
+
+          .navbar-brand-res {
+              display: block;
+              margin: 0;
+          }
+
+          .brand-logo-img-res {
+              height: 60px;
+          }
+      }
+
+      @media (max-width: 576px) {
+          .navbar-brand {
+              display: none;
+          }
+
+          .navbar-brand-res {
+              display: block;
+              margin-top: 6px;
+          }
+
+          .brand-logo-img-res {
+              height: 50px;
+          }
+          header.navbar-fixed-top .brand-logo-img,
+          header.navbar-fixed-top .brand-logo-img-res {
+            height: 52px;
+          }
+      }
