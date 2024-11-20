@@ -2671,7 +2671,7 @@
 
  /* ---------- 5.1 Global Sections ---------- */
  section {
-     padding-top: 60px;
+     padding-top: 40px;
      padding-bottom: 80px;
      overflow: hidden !important;
      max-width: 100%;
@@ -4101,8 +4101,8 @@
 
  .page_title .price {
      float: right;
-     width: 70px;
-     height: 70px;
+     width: 80px;
+     height: 80px;
      margin-top: 10px;
      border-radius: 4px;
      background: rgba(255, 182, 0, 0.3);
@@ -4111,8 +4111,8 @@
  .page_title .price .inner {
      margin: -5px;
      background-color: #deb666;
-     width: 70px;
-     height: 70px;
+     width: 80px;
+     height: 80px;
      border-radius: 4px;
      font-size: 1.5em;
      text-align: center;
@@ -5882,4 +5882,177 @@
  .wordpress-version:active,
  .wordpress-version:focus {
      background: #f5f3f0;
+ }
+
+ .near-about-hotel-container {
+     margin-top: 2.5rem;
+     padding: 1.8rem 1.3rem;
+     margin-bottom: 0;
+     background: #f5f5f5;
+     border-top: 1px solid #eee;
+     border-bottom: 1px solid #fff;
+ }
+
+
+
+ /* ========== Explore Attraction ==========  */
+
+
+ #Explore_Attraction_Style .review_content {
+     background: #fff;
+     border-radius: 4px;
+     margin-bottom: 25px;
+     padding: 20px 30px;
+     position: relative;
+     border: 1px solid #eef1f5;
+     -webkit-transition: all .5s;
+     transition: all .5s;
+ }
+
+ #Explore_Attraction_Style .review_item .review_content:hover {
+     -webkit-transform: translateY(-10px);
+     transform: translateY(-10px);
+     box-shadow: 0 25px 45px rgba(0, 0, 0, .15);
+ }
+
+ #Explore_Attraction_Style .review_item .review_content h3 {
+     text-align: center;
+ }
+
+ #Explore_Attraction_Style .review_content .review_rating {
+     text-align: center;
+     margin-top: 10px;
+ }
+
+ #Explore_Attraction_Style .review_content .review_rating i {
+     margin: 4px 0;
+     color: #deb666;
+ }
+
+ #Explore_Attraction_Style .review_item p {
+     margin: 15px 0;
+     font-weight: 400;
+     text-align: center;
+ }
+
+ #Explore_Attraction_Style .review_author {
+     text-align: center;
+ }
+
+ #Explore_Attraction_Style .review_author img {
+     display: inline-block;
+     border-radius: 50%;
+ }
+
+ #Explore_Attraction_Style .review_item .review_author .author_info {
+     display: inline-block;
+     position: relative;
+     margin-left: 10px;
+     top: 15px;
+     text-align: left;
+ }
+
+ #Explore_Attraction_Style .review_author h5 {
+     font-size: 18px;
+     font-weight: 600;
+     margin-top: 20px;
+ }
+
+ #Explore_Attraction_Style .review_author .place {
+     font-size: 14px;
+     font-weight: 400;
+     color: #8f939d;
+     display: block;
+ }
+
+ .loction-pin-icon {
+     position: absolute;
+     left: 19px;
+     top: 2px;
+     z-index: 1;
+ }
+
+ .loction-distance {
+     border: 1px solid;
+     border-radius: 30px;
+     width: fit-content;
+     padding: 1px 8px 1px 12px;
+     background-color: #b69854;
+     color: white;
+     font-size: 9.5px;
+ }
+
+ .review_content_EA {
+     min-height: 271px;
+     /* border: 1px solid goldenrod !important; */
+ }
+
+ @media only screen and (max-width: 992px) {
+     .review_content_EA {
+         min-height: 192px;
+     }
+ }
+
+ .anenites-sub-container {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: fit-content;
+     margin-left: 5rem;
+ }
+
+ .anenites-sub-container img {
+     width: 2.5rem;
+     margin-right: 10px;
+ }
+
+ .anenites-sub-box {
+     margin-bottom: 15px;
+
+ }
+
+ @media only screen and (min-width:1200px) {
+     .anenites-sub-container {
+         margin-left: 12rem;
+
+     }
+
+ }
+
+ @media only screen and (max-width:576px) {
+     .anenites-sub-container {
+         margin-left: 2rem;
+     }
+
+     .anenites-sub-container img {
+         width: 2rem;
+         margin-right: 6px;
+     }
+
+ }
+
+ @media only screen and (max-width:421px) {
+     .anenites-sub-container {
+         margin-left: 0.5rem;
+         font-size: 12px;
+     }
+
+     .anenites-sub-container img {
+         width: 1.5rem;
+         margin-right: 4px;
+     }
+
+ }
+
+ @media only screen and (max-width:327px) {
+     .anenites-sub-container {
+         margin-left: 0.2rem;
+         font-size: 10px;
+     }
+
+     .anenites-sub-container img {
+         width: 1rem;
+         margin-right: 4px;
+     }
+
  }
