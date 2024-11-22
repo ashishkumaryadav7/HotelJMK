@@ -1098,3 +1098,6 @@
     //   $(".wrapper").after("<!-- ONLY FOR DEMO --><a class='wordpress-version' href='https://1.envato.market/zaR0' target='_blank'><img src='images/icons/wordpress.png'>WordPress Version Available</a>");
   });
 })(jQuery);
+
+
+

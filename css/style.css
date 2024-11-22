@@ -2163,7 +2163,7 @@
      z-index: 9;
  }
 
- #back_to_top i {
+ #back_to_top .fa-angle-up {
      color: #fff;
      line-height: 55px;
      font-size: 22px;
@@ -2816,11 +2816,11 @@
      display: block;
  }
 
- .gradient_overlay {
+ /* .gradient_overlay {
      position: relative;
- }
+ } */
 
- .gradient_slider .slotholder:after,
+ /* .gradient_slider .slotholder:after,
  .gradient_overlay:after {
      width: 100%;
      height: 100%;
@@ -2835,16 +2835,16 @@
      background: -webkit-linear-gradient(315deg, rgba(147, 0, 17, .5) 0, rgba(86, 20, 147, .5) 100%);
      background: linear-gradient(135deg, rgba(147, 0, 17, .5) 0, rgba(86, 20, 147, .5) 100%);
      filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#930011', endColorstr='#561493', GradientType=1);
- }
+ } */
 
- .gradient_overlay.opac8:after {
+ /* .gradient_overlay.opac8:after {
      background: rgba(147, 0, 17, .8);
      background: -webkit-gradient(left top, right bottom, color-stop(0, rgba(64, 97, 237, 0.8)), color-stop(100%, rgba(86, 20, 147, .5)));
      background: -webkit-linear-gradient(145deg, rgba(147, 0, 17, .8) 0, rgba(86, 20, 147, .8) 100%);
      background: -webkit-linear-gradient(315deg, rgba(147, 0, 17, .8) 0, rgba(86, 20, 147, .8) 100%);
      background: linear-gradient(135deg, rgba(147, 0, 17, .8) 0, rgba(86, 20, 147, .8) 100%);
      filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#930011', endColorstr='#561493', GradientType=1);
- }
+ } */
 
  .dotted_overlay:before {
      content: '';
@@ -4449,7 +4449,8 @@
      opacity: .3;
  }
 
- #about_us_page .about_img .img2 {
+ /*.img2*/
+ #about_us_page .about_img {
      position: absolute;
      top: 0;
      margin: -5px;
@@ -5275,9 +5276,10 @@
      padding-top: 10px;
  }
 
- .room_list .room_details .room_services {
+ /*.room_services .room_details  below*/
+ /* .room_list  {
      padding-top: 30px;
- }
+ } */
 
  .room_list .room_details .room_services i {
      background: #deb666;
@@ -5303,7 +5305,7 @@
 
  .room_list .room_price .room_price_inner {
      padding-top: 36px;
-     padding-bottom: 37px;
+     padding-bottom: 10px;
  }
 
  .room_list .room_price .room_price_number {
@@ -6055,4 +6057,61 @@
          margin-right: 4px;
      }
 
+ }
+
+ .fa-instagram {
+     color: #ce4848;
+ }
+
+ .fa-facebook {
+     color: #125688;
+ }
+
+ /*for whatsapp icon*/
+ .float {
+     position: absolute;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 40px;
+     height: 40px;
+     bottom: 60px;
+     right: 7px;
+
+     background-color: #25d366 !important;
+     color: #FFF !important;
+     border-radius: 50%;
+
+     z-index: 100;
+     animation: bounce 2s infinite;
+     /* Add animation */
+ }
+
+ .float:hover {
+     background-color: #FFF !important;
+     color: #25d366 !important;
+ }
+
+ .float:active {
+     background-color: #FFF !important;
+     color: #25d366 !important;
+ }
+
+ .fa-whatsapp {
+     font-size: 2.5rem !important;
+ }
+
+ /* Keyframes for the bounce animation */
+ @keyframes bounce {
+
+     0%,
+     100% {
+         transform: translateY(0);
+         /* Start and end at the same position */
+     }
+
+     50% {
+         transform: translateY(-10px);
+         /* Move upward */
+     }
  }
