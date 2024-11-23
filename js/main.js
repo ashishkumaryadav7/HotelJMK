@@ -1002,73 +1002,73 @@
 
       var hotel_location = new google.maps.LatLng(var_latitude, var_longitude);
       var mapOptions = {
-          center: hotel_location,
-          zoom: 15,
-          scrollwheel: false,
-          streetViewControl: false,
+        center: hotel_location,
+        zoom: 15,
+        scrollwheel: false,
+        streetViewControl: false,
       };
       map = new google.maps.Map(
-          document.getElementById("map-canvas"),
-          mapOptions
+        document.getElementById("map-canvas"),
+        mapOptions
       );
       var contentString =
-          '<div id="infowindow_content">' +
-          "<p><strong>" +
-          hotel_name +
-          "</strong><br>" +
-          hotel_address +
-          "<br>" +
-          hotel_desc +
-          "<br>" +
-          hotel_more_desc +
-          "</p>" +
-          "</div>";
+        '<div id="infowindow_content">' +
+        "<p><strong>" +
+        hotel_name +
+        "</strong><br>" +
+        hotel_address +
+        "<br>" +
+        hotel_desc +
+        "<br>" +
+        hotel_more_desc +
+        "</p>" +
+        "</div>";
 
       var var_infowindow = new google.maps.InfoWindow({
-          content: contentString,
+        content: contentString,
       });
 
       var marker = new google.maps.Marker({
-          position: hotel_location,
-          map: map,
-          icon: pin,
-          title: title,
-          maxWidth: 500,
-          optimized: false,
+        position: hotel_location,
+        map: map,
+        icon: pin,
+        title: title,
+        maxWidth: 500,
+        optimized: false,
       });
       google.maps.event.addListener(marker, "click", function () {
-          var_infowindow.open(map, marker);
+        var_infowindow.open(map, marker);
       });
       panorama = map.getStreetView();
       panorama.setPosition(hotel_location);
       panorama.setPov(
-          /** @type {google.maps.StreetViewPov} */ ({
-              heading: 265,
-              pitch: 0,
-          })
+        /** @type {google.maps.StreetViewPov} */ ({
+          heading: 265,
+          pitch: 0,
+        })
       );
 
       var openStreet = document.getElementById("openStreetView");
       if (openStreet) {
-          document.getElementById("openStreetView").onclick = function () {
-              toggleStreetView();
-          };
+        document.getElementById("openStreetView").onclick = function () {
+          toggleStreetView();
+        };
       }
 
       function toggleStreetView() {
-          var toggle = panorama.getVisible();
-          if (toggle == false) {
-              panorama.setVisible(true);
-          } else {
-              panorama.setVisible(false);
-          }
+        var toggle = panorama.getVisible();
+        if (toggle == false) {
+          panorama.setVisible(true);
+        } else {
+          panorama.setVisible(false);
+        }
       }
-  }
+    }
 
-  // Check if google map div exists
-  if (document.getElementById("map-canvas")) {
+    // Check if google map div exists
+    if (document.getElementById("map-canvas")) {
       google.maps.event.addDomListener(window, "load", initialize);
-  }
+    }
 
     //Check if google map div exist
     if ($("#map-canvas").length) {
@@ -1076,13 +1076,16 @@
     }
 
     /*========== BACK TO TOP ==========*/
-    var amountScrolled = 500;
+    var amountScrolled = 300;
     var back_to_top = $("#back_to_top");
+    var float_icon = $(".float");
     $(window).on("scroll", function () {
       if ($(window).scrollTop() > amountScrolled) {
         back_to_top.addClass("active");
+        float_icon.css("bottom", "75px");
       } else {
         back_to_top.removeClass("active");
+        float_icon.css("bottom", "5px");
       }
     });
     back_to_top.on("click", function () {
@@ -1094,10 +1097,5 @@
       );
       return false;
     });
-
-    //   $(".wrapper").after("<!-- ONLY FOR DEMO --><a class='wordpress-version' href='https://1.envato.market/zaR0' target='_blank'><img src='images/icons/wordpress.png'>WordPress Version Available</a>");
   });
 })(jQuery);
-
-
-

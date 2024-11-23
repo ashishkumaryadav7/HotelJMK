@@ -2163,6 +2163,7 @@
      z-index: 9;
  }
 
+
  #back_to_top .fa-angle-up {
      color: #fff;
      line-height: 55px;
@@ -6069,14 +6070,14 @@
 
  /*for whatsapp icon*/
  .float {
-     position: absolute;
+     position: fixed;
      display: flex;
      justify-content: center;
      align-items: center;
      width: 40px;
      height: 40px;
-     bottom: 60px;
-     right: 7px;
+     bottom: 5px;
+     right: 22px;
 
      background-color: #25d366 !important;
      color: #FFF !important;
