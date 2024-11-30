@@ -5994,6 +5994,10 @@
      .review_content_EA {
          min-height: 192px;
      }
+
+     .welcome_mssg {
+         display: none;
+     }
  }
 
  .anenites-sub-container {
@@ -6032,6 +6036,10 @@
          margin-right: 6px;
      }
 
+     .email-n {
+         display: none !important;
+     }
+
  }
 
  @media only screen and (max-width:421px) {
@@ -6057,6 +6065,9 @@
          width: 1rem;
          margin-right: 4px;
      }
+     .imp-h {
+        font-size: 11px;
+    }
 
  }
 
