@@ -248,15 +248,42 @@
                 </div>
                 <!-- ========== BOOKING FORM ========== -->
                 <div class="row">
-                  <form id="booking_form_advanced">
+                  <form id="booking_form_advanced" class="bookHotelJMK">
                     <div class="col-md-6">
                       <div class="form-group">
-                        <label>Your Name</label>
+                        <label>First Name</label>
                         <input
-                          name="booking-name"
+                          name="booking-first-name"
                           type="text"
                           class="form-control"
-                          placeholder="Your Name"
+                          placeholder="Your First Name"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Last Name</label>
+                        <input
+                          name="booking-last-name"
+                          type="text"
+                          class="form-control"
+                          placeholder="Your Last Name"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <label>Phone Number</label>
+                        <input
+                          name="booking-phone"
+                          type="tel"
+                          maxlength="10"
+                          pattern="\d{10}"
+                          required
+                          class="form-control"
+                          placeholder="Your Phone Number"
                         />
                       </div>
                     </div>
@@ -268,20 +295,11 @@
                           name="booking-email"
                           type="email"
                           placeholder="Your Email Address"
+                          required
                         />
                       </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="form-group">
-                        <label>Phone Number</label>
-                        <input
-                          name="booking-phone"
-                          type="text"
-                          class="form-control"
-                          placeholder="Your Phone Number"
-                        />
-                      </div>
-                    </div>
+
                     <div class="col-md-6">
                       <div class="form-group">
                         <label>Country</label>
@@ -625,6 +643,18 @@
                     </div>
                     <div class="col-md-6">
                       <div class="form-group">
+                        <label>Address</label>
+                        <input
+                          name="booking-address"
+                          type="text"
+                          class="form-control"
+                          placeholder="Your Address"
+                          required
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
                         <label
                           >Arrival
                           <a
@@ -642,9 +672,10 @@
                           <input
                             type="text"
                             class="datepicker form-control"
-                            name="booking-checkin"
+                            name="booking-arival"
                             placeholder="Arrival Date"
                             readonly
+                            required
                           />
                         </div>
                       </div>
@@ -668,9 +699,10 @@
                           <input
                             type="text"
                             class="datepicker form-control"
-                            name="booking-checkout"
+                            name="booking-departure"
                             placeholder="Departure Date"
                             readonly
+                            required
                           />
                         </div>
                       </div>
@@ -696,8 +728,8 @@
                             class="form-control"
                             title="Adults"
                             data-header="Adults"
+                            required
                           >
-                            <option value="0">0</option>
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -727,6 +759,7 @@
                             class="form-control"
                             title="Children"
                             data-header="Children"
+                            required
                           >
                             <option value="0">0</option>
                             <option value="1">1</option>
@@ -740,26 +773,42 @@
                     <div class="col-md-12">
                       <div class="form-group">
                         <label>Room Type</label>
-                        <div class="form_select">
+                        <input
+                          id="room-not-found"
+                          type="text"
+                          readonly
+                          class="form-control"
+                        />
+                        <div class="form_select" id="room-type-dropdown">
                           <select
+                            id="room-type"
                             name="booking-roomtype"
                             class="form-control"
                             title="Select Room Type"
                             data-header="Select Room Type"
-                          >
-                            <option
-                              value="Standard Room"
-                              data-subtext="<span class='label label-info'>€89 / night</span>"
-                            >
-                              Standard Room
-                            </option>
-                            <option
-                              value="Deluxe Room"
-                              data-subtext="<span class='label label-info'>€129 / night</span>"
-                            >
-                              Deluxe Room
-                            </option>
-                          </select>
+                            required
+                          ></select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>Room Category</label>
+                        <input
+                          id="category-not-found"
+                          type="text"
+                          readonly
+                          class="form-control"
+                        />
+                        <div class="form_select" id="room-category-dropdown">
+                          <select
+                            id="room-category"
+                            name="booking-roomcategory"
+                            class="form-control"
+                            title="Select Room Category"
+                            data-header="Select Room Category"
+                            required
+                          ></select>
                         </div>
                       </div>
                     </div>
@@ -774,7 +823,11 @@
                       </div>
                     </div>
                     <div class="col-md-12">
-                      <button type="submit" class="button btn_blue pull-right">
+                      <button
+                        type="submit"
+                        id="bookRoomBtn"
+                        class="button btn_blue pull-right"
+                      >
                         <i
                           class="fa fa-calendar-check-o"
                           aria-hidden="true"
@@ -1046,5 +1099,6 @@
       data-cf-settings="f4bf3214c95ad1e9287d78bf-|49"
       defer
     ></script>
+    <script type="module" src="js/booking.js"></script>
   </body>
 </html>
