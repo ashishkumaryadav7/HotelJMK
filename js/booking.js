@@ -81,14 +81,13 @@ document
         // Parse the error response from the API
         const errorData = await response.json();
 
-        if (errorData.message) {
-          showNotification("error", errorData.message);
+        if (errorData.msg) {
+          showNotification("error", errorData.msg);
         } else if (errorData.error) {
-          console.log(2);
           if (Array.isArray(errorData?.error)) {
             showNotification("error", errorData?.error[0]?.msg);
           } else {
-            showNotification("error", errorData.error);
+            showNotification("error", errorData.msg);
           }
         } else {
           showNotification("error", "Some error occured !");
@@ -96,7 +95,7 @@ document
       } else {
         const data = await response.json();
 
-        showNotification("success", data.message);
+        showNotification("success", data.msg);
         document
           .querySelectorAll("input, textarea")
           .forEach((input) => (input.value = ""));
