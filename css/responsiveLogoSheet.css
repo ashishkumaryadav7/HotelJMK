@@ -1,6 +1,34 @@
       /* Default height */
       .brand-logo-img {
-          height: 80px;
+          /* height: 80px; */
+          height: 98px;
+
+      }
+
+      .fixed.navbar-fixed-top.scroll {
+          height: 90px;
+      }
+
+      .footer-navbrand {
+          padding: 0;
+          margin: 0;
+          width: fit-content;
+          height: fit-content;
+      }
+
+      .footerlogo {
+          height: 150px !important;
+      }
+
+      .navbar-brand {
+          position: absolute;
+          top: 6px;
+          left: 50px;
+      }
+
+      .welcome_mssg {
+          left: 155px;
+          position: absolute;
       }
 
       .navbar-brand-res {
@@ -9,15 +37,21 @@
 
       header.navbar-fixed-top .brand-logo-img,
       header.navbar-fixed-top .brand-logo-img-res {
-        height: 80px;
+          height: 80px;
       }
-.footer-mail-box{
-    width: 280px;
-}
+
+      .footer-mail-box {
+          width: 280px;
+      }
+
       /* Reduce height when screen width is 1199px or less */
       @media (max-width: 1199px) {
           .brand-logo-img {
-              height: 70px;
+              height: 95px;
+          }
+
+          .welcome_mssg {
+              left: 140px !important;
           }
       }
 
@@ -32,11 +66,33 @@
           }
 
           .brand-logo-img-res {
-              height: 80px;
+              height: 86px;
+
           }
-          .footer-mail-box{
-            width: auto;
-        }
+
+          .navbar-brand-res {
+              position: absolute;
+              top: 6px;
+          }
+
+          .footer-mail-box {
+              width: auto;
+          }
+      }
+
+      @media (max-width: 715px) {
+          .brand-logo-img-res {
+              height: 80px !important;
+
+
+          }
+
+          .navbar-brand-res {
+              position: static !important;
+
+              top: 6px;
+          }
+
       }
 
       @media (max-width: 576px) {
@@ -52,8 +108,9 @@
           .brand-logo-img-res {
               height: 50px;
           }
+
           header.navbar-fixed-top .brand-logo-img,
           header.navbar-fixed-top .brand-logo-img-res {
-            height: 52px;
+              height: 52px;
           }
       }

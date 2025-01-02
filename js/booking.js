@@ -138,17 +138,17 @@ function showNotification(type, message) {
 }
 
 // Function to call the GET API and load data when the page is loading
-(async function loadDataOnPageLoad() {
+async function fetchRoomType() {
   const selectElement = document.getElementById("room-type");
   const roomNotFound = document.getElementById("room-not-found");
   const roomTypeDropDwon = document.getElementById("room-type-dropdown");
   roomNotFound.style.display = "none";
 
-  console.log("object calling API");
 
   try {
     // Make the GET API call using fetch and await the response
     const response = await fetch(`${CONFIG.API_BASE_URL}/room-type`);
+    // console.log(response);
     if (!response.ok) {
       roomTypeDropDwon.style.display = "none";
       roomNotFound.style.display = "block";
@@ -174,8 +174,8 @@ function showNotification(type, message) {
     roomTypeDropDwon.style.display = "none";
     roomNotFound.value = `some error occured in Room type`;
   }
-})();
-(async function fetchRoomCategory() {
+}
+async function fetchRoomCategory() {
   const selectCategoryElement = document.getElementById("room-category");
   const roomCategoryNotFound = document.getElementById("category-not-found");
   const roomCategoryDropDwon = document.getElementById(
@@ -210,7 +210,13 @@ function showNotification(type, message) {
     roomCategoryDropDwon.style.display = "none";
     roomCategoryNotFound.value = `some error occured in Room Category`;
   }
-})();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetchRoomType();
+  fetchRoomCategory();
+
+});
 
 function capitalizeWords(input) {
   return input
