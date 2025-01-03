@@ -703,55 +703,54 @@
       <div class="hbf">
         <div class="container">
           <div class="inner text-center">
-            <form id="booking-form">
+            <form id="booking-form" onsubmit="handleFormSubmit(event)">
               <div class="col-md-2 md_pr5">
                 <div class="form-group">
                   <label
-                    >Your Email
+                    >First Name
                     <a
                       href="#"
-                      title="Your Email"
+                      title="First Name"
                       data-toggle="popover"
                       data-placement="top"
                       data-trigger="hover"
-                      data-content="Please Type Your Email"
+                      data-content="Please Type Your First Name"
                     >
                       <i class="label_icon_info fa fa-info-circle"></i
                     ></a>
                   </label>
                   <input
                     class="form-control"
-                    name="booking-email"
-                    type="email"
-                    placeholder="Your Email Address"
+                    name="booking-first-name"
+                    type="text"
+                    placeholder="Your First Name"
+                    required
                   />
                 </div>
               </div>
               <div class="col-md-2 md_p5">
                 <div class="form-group">
                   <label
-                    >Room Type
+                    >Last Name
                     <a
                       href="#"
-                      title="Room Type"
+                      title="Last Name"
                       data-toggle="popover"
                       data-placement="top"
                       data-trigger="hover"
-                      data-content="Please Select Room Type: Single Room, Double Room or Deluxe Room"
+                      data-content="Please Type Last Name"
                     >
                       <i class="label_icon_info fa fa-info-circle"></i
                     ></a>
                   </label>
                   <div class="form_select">
-                    <select
-                      name="booking-roomtype"
+                    <input
                       class="form-control"
-                      title="Select Room Type"
-                      data-header="Room Type"
-                    >
-                      <option value="Single">Standard</option>
-                      <option value="Deluxe">Deluxe</option>
-                    </select>
+                      name="booking-last-name"
+                      type="text"
+                      placeholder="Your Last Name"
+                      required
+                    />
                   </div>
                 </div>
               </div>
@@ -770,7 +769,7 @@
                           data-toggle="popover"
                           data-placement="top"
                           data-trigger="hover"
-                          data-content="Check In from 11:00 am"
+                          data-content="Choose Your Arival Date"
                         >
                           <i class="label_icon_info fa fa-info-circle"></i
                         ></a>
@@ -780,9 +779,10 @@
                         <input
                           type="text"
                           class="datepicker form-control md_noborder_right"
-                          name="booking-checkin"
+                          name="booking-arival"
                           placeholder="Arrival Date"
                           readonly
+                          required
                         />
                       </div>
                     </div>
@@ -800,7 +800,7 @@
                           data-toggle="popover"
                           data-placement="top"
                           data-trigger="hover"
-                          data-content="Check Out from 12:00 am"
+                          data-content="Choose Your Departure Date"
                         >
                           <i class="label_icon_info fa fa-info-circle"></i
                         ></a>
@@ -809,9 +809,10 @@
                         <input
                           type="text"
                           class="datepicker form-control"
-                          name="booking-checkout"
+                          name="booking-departure"
                           placeholder="Departure Date"
                           readonly
+                          required
                         />
                       </div>
                     </div>
@@ -889,10 +890,11 @@
                 </div>
               </div>
               <div class="col-md-2 md_pl5">
-                <a href="booking-form.html" class="button btn_blue btn_full">
+                <!-- <a href="booking-form.html" class="button btn_blue btn_full">  </a> -->
+
+                <button type="submit" class="button btn_blue btn_full">
                   BOOK A ROOM
-                </a>
-                <div class="advanced_form_link"></div>
+                </button>
               </div>
             </form>
           </div>
@@ -2146,5 +2148,22 @@
       defer
     ></script>
     <!-- <script src="js/route.js"></script> -->
+    <script>
+      function handleFormSubmit(event) {
+        event.preventDefault(); // Prevent the default form submission behavior
+
+        const form = event.target;
+        const formData = new FormData(form);
+
+        const data = {};
+        formData.forEach((value, key) => {
+          data[key] = value;
+        });
+
+        const queryString = new URLSearchParams(data).toString();
+        console.log(queryString);
+        window.location.href = `booking-form.html?${queryString}`;
+      }
+    </script>
   </body>
 </html>
